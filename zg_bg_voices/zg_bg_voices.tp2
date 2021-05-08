@@ -1,0 +1,640 @@
+BACKUP ~zg_bg_voices/backup~ // location to store files for uninstall purposes
+SUPPORT "https://forums.beamdog.com/discussion/82008"
+VERSION ~1.0.0~
+
+
+LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/english/setup.tra~
+
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Begin core component                             \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+BEGIN @0
+LABEL ZG-VOICE-BG
+
+INCLUDE ~%MOD_FOLDER%/tph/cd_add_soundset.tph~ // includes the macro that does the work
+
+COPY ~%MOD_FOLDER%/sounds~ ~lang/en_us/sounds~ // change en_us to the appropriate language folder
+COPY ~%MOD_FOLDER%/override~    ~override~
+
+DEFINE_ACTION_FUNCTION zg_add_name_to_soundset
+  INT_VAR zg_prettyname = "-1"
+  STR_VAR zg_filename = ""
+BEGIN
+  APPEND ~M_zgbg.lua~ ~filenames_stringrefs['%zg_filename%'] = {%zg_prettyname%, 2}~
+END
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////                                                  \\\\\
+///// Individual sets                                  \\\\\
+/////                                                  \\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\/////\\\\\
+
+// Female Confident
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1001) //  i
+    cd_action2            = RESOLVE_STR_REF(@1002) //  j
+    cd_action3            = RESOLVE_STR_REF(@1003) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1016) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1021) //  d
+    cd_common1            = RESOLVE_STR_REF(@1025) //  f
+    cd_common2            = RESOLVE_STR_REF(@1026) //  g
+    cd_common3            = RESOLVE_STR_REF(@1027) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1034) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1040) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1046) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1050) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1065) //  c
+  STR_VAR cd_name = "ZGBGF0"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1000)
+  STR_VAR zg_filename = "ZGBGF0"
+END
+
+
+// Female Aggressive
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1101) //  i
+    cd_action2            = RESOLVE_STR_REF(@1102) //  j
+    cd_action3            = RESOLVE_STR_REF(@1103) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1116) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1121) //  d
+    cd_common1            = RESOLVE_STR_REF(@1125) //  f
+    cd_common2            = RESOLVE_STR_REF(@1126) //  g
+    cd_common3            = RESOLVE_STR_REF(@1127) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1134) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1140) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1146) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1150) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1165) //  c
+  STR_VAR cd_name = "ZGBGF1"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1100)
+  STR_VAR zg_filename = "ZGBGF1"
+END
+
+// Female Streetwise
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1201) //  i
+    cd_action2            = RESOLVE_STR_REF(@1202) //  j
+    cd_action3            = RESOLVE_STR_REF(@1203) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1216) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1221) //  d
+    cd_common1            = RESOLVE_STR_REF(@1225) //  f
+    cd_common2            = RESOLVE_STR_REF(@1226) //  g
+    cd_common3            = RESOLVE_STR_REF(@1227) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1234) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1240) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1246) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1250) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1265) //  c
+  STR_VAR cd_name = "ZGBGF2"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1200)
+  STR_VAR zg_filename = "ZGBGF2"
+END
+
+// Female Elderly
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1301) //  i
+    cd_action2            = RESOLVE_STR_REF(@1302) //  j
+    cd_action3            = RESOLVE_STR_REF(@1303) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1316) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1321) //  d
+    cd_common1            = RESOLVE_STR_REF(@1325) //  f
+    cd_common2            = RESOLVE_STR_REF(@1326) //  g
+    cd_common3            = RESOLVE_STR_REF(@1327) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1334) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1340) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1346) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1350) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1365) //  c
+  STR_VAR cd_name = "ZGBGF3"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1300)
+  STR_VAR zg_filename = "ZGBGF3"
+END
+
+// Female Commanding
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1401) //  i
+    cd_action2            = RESOLVE_STR_REF(@1402) //  j
+    cd_action3            = RESOLVE_STR_REF(@1403) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1416) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1421) //  d
+    cd_common1            = RESOLVE_STR_REF(@1425) //  f
+    cd_common2            = RESOLVE_STR_REF(@1426) //  g
+    cd_common3            = RESOLVE_STR_REF(@1427) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1434) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1440) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1446) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1450) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1465) //  c
+  STR_VAR cd_name = "ZGBGF4"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1400)
+  STR_VAR zg_filename = "ZGBGF4"
+END
+
+// Female Jester
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1501) //  i
+    cd_action2            = RESOLVE_STR_REF(@1502) //  j
+    cd_action3            = RESOLVE_STR_REF(@1503) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1516) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1521) //  d
+    cd_common1            = RESOLVE_STR_REF(@1525) //  f
+    cd_common2            = RESOLVE_STR_REF(@1526) //  g
+    cd_common3            = RESOLVE_STR_REF(@1527) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1534) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1540) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1546) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1550) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1565) //  c
+  STR_VAR cd_name = "ZGBGF5"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1500)
+  STR_VAR zg_filename = "ZGBGF5"
+END
+
+// Female Tough
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1601) //  i
+    cd_action2            = RESOLVE_STR_REF(@1602) //  j
+    cd_action3            = RESOLVE_STR_REF(@1603) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@1616) //  a
+    cd_bored1             = RESOLVE_STR_REF(@1621) //  d
+    cd_common1            = RESOLVE_STR_REF(@1625) //  f
+    cd_common2            = RESOLVE_STR_REF(@1626) //  g
+    cd_common3            = RESOLVE_STR_REF(@1627) //  h
+    cd_damage1            = RESOLVE_STR_REF(@1634) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@1640) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@1646) //  e
+    cd_leader1            = RESOLVE_STR_REF(@1650) //  b
+    cd_tired1             = RESOLVE_STR_REF(@1665) //  c
+  STR_VAR cd_name = "ZGBGF6"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1600)
+  STR_VAR zg_filename = "ZGBGF6"
+END
+
+// Female Relaxed
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1701) //  i
+    cd_action2            = RESOLVE_STR_REF(@1702) //  j
+    cd_action3            = RESOLVE_STR_REF(@1703) //  k
+    cd_action4            = RESOLVE_STR_REF(@1704) //  s
+    cd_action5            = RESOLVE_STR_REF(@1705) //  t
+    cd_action6            = RESOLVE_STR_REF(@1706) //  u
+    cd_action7            = RESOLVE_STR_REF(@1707) //  v
+    cd_action_rare1       = RESOLVE_STR_REF(@1708) //  x
+    cd_action_rare2       = RESOLVE_STR_REF(@1709) //  y
+    cd_action_rare3       = RESOLVE_STR_REF(@1710) //  a_ (unofficial)
+    cd_action_rare4       = RESOLVE_STR_REF(@1711) //  b_ (unofficial)
+    cd_battlecry1         = RESOLVE_STR_REF(@1716) //  a
+    cd_battlecry2         = RESOLVE_STR_REF(@1717) //  8
+    cd_battlecry3         = RESOLVE_STR_REF(@1718) //  9
+    cd_battlecry4         = RESOLVE_STR_REF(@1719) //  g_ (unofficial)
+    cd_battlecry5         = RESOLVE_STR_REF(@1720) //  h_ (unofficial)
+    cd_bored1             = RESOLVE_STR_REF(@1721) //  d
+    cd_breaking_pt        = RESOLVE_STR_REF(@1723) //  j_ (unofficial)
+    cd_city               = RESOLVE_STR_REF(@1724) //  o
+    cd_common1            = RESOLVE_STR_REF(@1725) //  f
+    cd_common2            = RESOLVE_STR_REF(@1726) //  g
+    cd_common3            = RESOLVE_STR_REF(@1727) //  h
+    cd_common4            = RESOLVE_STR_REF(@1728) //  0
+    cd_common5            = RESOLVE_STR_REF(@1729) //  k_ (unofficial)
+    cd_common6            = RESOLVE_STR_REF(@1730) //  l_ (unofficial, letter)
+    cd_criticalhit        = RESOLVE_STR_REF(@1732) //  z
+    cd_criticalmiss       = RESOLVE_STR_REF(@1733) //  1  (number)
+    cd_damage1            = RESOLVE_STR_REF(@1734) //  l  (letter)
+    cd_day                = RESOLVE_STR_REF(@1737) //  q
+    cd_disrupted          = RESOLVE_STR_REF(@1738) //  6
+    cd_dungeon            = RESOLVE_STR_REF(@1739) //  p
+    cd_dying1             = RESOLVE_STR_REF(@1740) //  m
+    cd_forest             = RESOLVE_STR_REF(@1742) //  n
+    cd_gen_death1         = RESOLVE_STR_REF(@1743) //  w
+    cd_happy              = RESOLVE_STR_REF(@1745) //  r_ (unofficial)
+    cd_hurt1              = RESOLVE_STR_REF(@1746) //  e
+    cd_immune             = RESOLVE_STR_REF(@1748) //  2
+    cd_inventory          = RESOLVE_STR_REF(@1749) //  3
+    cd_leader1            = RESOLVE_STR_REF(@1750) //  b
+    cd_morale_break1      = RESOLVE_STR_REF(@1752) //  u_ (unofficial)
+    cd_night              = RESOLVE_STR_REF(@1754) //  r
+    cd_pickpocket         = RESOLVE_STR_REF(@1755) //  4
+    cd_select_rare1       = RESOLVE_STR_REF(@1756) //  w_ (unofficial)
+    cd_select_rare2       = RESOLVE_STR_REF(@1757) //  x_ (unofficial)
+    cd_select_rare3       = RESOLVE_STR_REF(@1758) //  y_ (unofficial)
+    cd_select_rare4       = RESOLVE_STR_REF(@1759) //  z_ (unofficial)
+    cd_shadows            = RESOLVE_STR_REF(@1764) //  5
+    cd_tired1             = RESOLVE_STR_REF(@1765) //  c
+    cd_trap               = RESOLVE_STR_REF(@1767) //  7
+    cd_unhappy_1          = RESOLVE_STR_REF(@1768) //  5_ (unofficial)
+    cd_unhappy_2          = RESOLVE_STR_REF(@1769) //  6_ (unofficial)
+  STR_VAR cd_name = "ZGBGF7"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1700)
+  STR_VAR zg_filename = "ZGBGF7"
+END
+
+// Female Scholarly
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@1801) //  i
+    cd_action2            = RESOLVE_STR_REF(@1802) //  j
+    cd_action3            = RESOLVE_STR_REF(@1803) //  k
+    cd_action4            = RESOLVE_STR_REF(@1804) //  s
+    cd_action5            = RESOLVE_STR_REF(@1805) //  t
+    cd_action6            = RESOLVE_STR_REF(@1806) //  u
+    cd_action7            = RESOLVE_STR_REF(@1807) //  v
+    cd_action_rare1       = RESOLVE_STR_REF(@1808) //  x
+    cd_action_rare2       = RESOLVE_STR_REF(@1809) //  y
+    cd_action_rare3       = RESOLVE_STR_REF(@1810) //  a_ (unofficial)
+    cd_action_rare4       = RESOLVE_STR_REF(@1811) //  b_ (unofficial)
+    cd_battlecry1         = RESOLVE_STR_REF(@1816) //  a
+    cd_battlecry2         = RESOLVE_STR_REF(@1817) //  8
+    cd_battlecry3         = RESOLVE_STR_REF(@1818) //  9
+    cd_battlecry4         = RESOLVE_STR_REF(@1819) //  g_ (unofficial)
+    cd_battlecry5         = RESOLVE_STR_REF(@1820) //  h_ (unofficial)
+    cd_bored1             = RESOLVE_STR_REF(@1821) //  d
+    cd_breaking_pt        = RESOLVE_STR_REF(@1823) //  j_ (unofficial)
+    cd_city               = RESOLVE_STR_REF(@1824) //  o
+    cd_common1            = RESOLVE_STR_REF(@1825) //  f
+    cd_common2            = RESOLVE_STR_REF(@1826) //  g
+    cd_common3            = RESOLVE_STR_REF(@1827) //  h
+    cd_common4            = RESOLVE_STR_REF(@1828) //  0
+    cd_common5            = RESOLVE_STR_REF(@1829) //  k_ (unofficial)
+    cd_common6            = RESOLVE_STR_REF(@1830) //  l_ (unofficial, letter)
+    cd_criticalhit        = RESOLVE_STR_REF(@1832) //  z
+    cd_criticalmiss       = RESOLVE_STR_REF(@1833) //  1  (number)
+    cd_damage1            = RESOLVE_STR_REF(@1834) //  l  (letter)
+    cd_day                = RESOLVE_STR_REF(@1837) //  q
+    cd_disrupted          = RESOLVE_STR_REF(@1838) //  6
+    cd_dungeon            = RESOLVE_STR_REF(@1839) //  p
+    cd_dying1             = RESOLVE_STR_REF(@1840) //  m
+    cd_forest             = RESOLVE_STR_REF(@1842) //  n
+    cd_gen_death1         = RESOLVE_STR_REF(@1843) //  w
+    cd_happy              = RESOLVE_STR_REF(@1845) //  r_ (unofficial)
+    cd_hurt1              = RESOLVE_STR_REF(@1846) //  e
+    cd_immune             = RESOLVE_STR_REF(@1848) //  2
+    cd_inventory          = RESOLVE_STR_REF(@1849) //  3
+    cd_leader1            = RESOLVE_STR_REF(@1850) //  b
+    cd_morale_break1      = RESOLVE_STR_REF(@1852) //  u_ (unofficial)
+    cd_night              = RESOLVE_STR_REF(@1854) //  r
+    cd_pickpocket         = RESOLVE_STR_REF(@1855) //  4
+    cd_select_rare1       = RESOLVE_STR_REF(@1856) //  w_ (unofficial)
+    cd_select_rare2       = RESOLVE_STR_REF(@1857) //  x_ (unofficial)
+    cd_select_rare3       = RESOLVE_STR_REF(@1858) //  y_ (unofficial)
+    cd_select_rare4       = RESOLVE_STR_REF(@1859) //  z_ (unofficial)
+    cd_shadows            = RESOLVE_STR_REF(@1864) //  5
+    cd_tired1             = RESOLVE_STR_REF(@1865) //  c
+    cd_trap               = RESOLVE_STR_REF(@1867) //  7
+    cd_unhappy_1          = RESOLVE_STR_REF(@1868) //  5_ (unofficial)
+    cd_unhappy_2          = RESOLVE_STR_REF(@1869) //  6_ (unofficial)
+  STR_VAR cd_name = "ZGBGF8"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@1800)
+  STR_VAR zg_filename = "ZGBGF8"
+END
+
+
+// Male Relaxed
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2001) //  i
+    cd_action2            = RESOLVE_STR_REF(@2002) //  j
+    cd_action3            = RESOLVE_STR_REF(@2003) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2016) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2021) //  d
+    cd_common1            = RESOLVE_STR_REF(@2025) //  f
+    cd_common2            = RESOLVE_STR_REF(@2026) //  g
+    cd_common3            = RESOLVE_STR_REF(@2027) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2034) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2040) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2046) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2050) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2065) //  c
+  STR_VAR cd_name = "ZGBGM0"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2000)
+  STR_VAR zg_filename = "ZGBGM0"
+END
+
+// Male Impatient
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2101) //  i
+    cd_action2            = RESOLVE_STR_REF(@2102) //  j
+    cd_action3            = RESOLVE_STR_REF(@2103) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2116) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2121) //  d
+    cd_common1            = RESOLVE_STR_REF(@2125) //  f
+    cd_common2            = RESOLVE_STR_REF(@2126) //  g
+    cd_common3            = RESOLVE_STR_REF(@2127) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2134) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2140) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2146) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2150) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2165) //  c
+  STR_VAR cd_name = "ZGBGM1"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2100)
+  STR_VAR zg_filename = "ZGBGM1"
+END
+
+// Male Earnest
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2201) //  i
+    cd_action2            = RESOLVE_STR_REF(@2202) //  j
+    cd_action3            = RESOLVE_STR_REF(@2203) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2216) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2221) //  d
+    cd_common1            = RESOLVE_STR_REF(@2225) //  f
+    cd_common2            = RESOLVE_STR_REF(@2226) //  g
+    cd_common3            = RESOLVE_STR_REF(@2227) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2234) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2240) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2246) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2250) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2265) //  c
+  STR_VAR cd_name = "ZGBGM2"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2200)
+  STR_VAR zg_filename = "ZGBGM2"
+END
+
+// Male Streetwise
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2301) //  i
+    cd_action2            = RESOLVE_STR_REF(@2302) //  j
+    cd_action3            = RESOLVE_STR_REF(@2303) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2316) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2321) //  d
+    cd_common1            = RESOLVE_STR_REF(@2325) //  f
+    cd_common2            = RESOLVE_STR_REF(@2326) //  g
+    cd_common3            = RESOLVE_STR_REF(@2327) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2334) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2340) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2346) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2350) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2365) //  c
+  STR_VAR cd_name = "ZGBGM3"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2300)
+  STR_VAR zg_filename = "ZGBGM3"
+END
+
+// Male Aggressive
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2401) //  i
+    cd_action2            = RESOLVE_STR_REF(@2402) //  j
+    cd_action3            = RESOLVE_STR_REF(@2403) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2416) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2421) //  d
+    cd_common1            = RESOLVE_STR_REF(@2425) //  f
+    cd_common2            = RESOLVE_STR_REF(@2426) //  g
+    cd_common3            = RESOLVE_STR_REF(@2427) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2434) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2440) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2446) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2450) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2465) //  c
+  STR_VAR cd_name = "ZGBGM4"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2400)
+  STR_VAR zg_filename = "ZGBGM4"
+END
+
+// Male Scholarly
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2501) //  i
+    cd_action2            = RESOLVE_STR_REF(@2502) //  j
+    cd_action3            = RESOLVE_STR_REF(@2503) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2516) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2521) //  d
+    cd_common1            = RESOLVE_STR_REF(@2525) //  f
+    cd_common2            = RESOLVE_STR_REF(@2526) //  g
+    cd_common3            = RESOLVE_STR_REF(@2527) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2534) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2540) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2546) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2550) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2565) //  c
+  STR_VAR cd_name = "ZGBGM5"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2500)
+  STR_VAR zg_filename = "ZGBGM5"
+END
+
+// Male Brute
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2601) //  i
+    cd_action2            = RESOLVE_STR_REF(@2602) //  j
+    cd_action3            = RESOLVE_STR_REF(@2603) //  k
+    cd_battlecry1         = RESOLVE_STR_REF(@2616) //  a
+    cd_bored1             = RESOLVE_STR_REF(@2621) //  d
+    cd_common1            = RESOLVE_STR_REF(@2625) //  f
+    cd_common2            = RESOLVE_STR_REF(@2626) //  g
+    cd_common3            = RESOLVE_STR_REF(@2627) //  h
+    cd_damage1            = RESOLVE_STR_REF(@2634) //  l  (letter)
+    cd_dying1             = RESOLVE_STR_REF(@2640) //  m
+    cd_hurt1              = RESOLVE_STR_REF(@2646) //  e
+    cd_leader1            = RESOLVE_STR_REF(@2650) //  b
+    cd_tired1             = RESOLVE_STR_REF(@2665) //  c
+  STR_VAR cd_name = "ZGBGM6"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2600)
+  STR_VAR zg_filename = "ZGBGM6"
+END
+
+// Male Commanding
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2701) //  i
+    cd_action2            = RESOLVE_STR_REF(@2702) //  j
+    cd_action3            = RESOLVE_STR_REF(@2703) //  k
+    cd_action4            = RESOLVE_STR_REF(@2704) //  s
+    cd_action5            = RESOLVE_STR_REF(@2705) //  t
+    cd_action6            = RESOLVE_STR_REF(@2706) //  u
+    cd_action7            = RESOLVE_STR_REF(@2707) //  v
+    cd_action_rare1       = RESOLVE_STR_REF(@2708) //  x
+    cd_action_rare2       = RESOLVE_STR_REF(@2709) //  y
+    cd_action_rare3       = RESOLVE_STR_REF(@2710) //  a_ (unofficial)
+    cd_action_rare4       = RESOLVE_STR_REF(@2711) //  b_ (unofficial)
+    cd_battlecry1         = RESOLVE_STR_REF(@2716) //  a
+    cd_battlecry2         = RESOLVE_STR_REF(@2717) //  8
+    cd_battlecry3         = RESOLVE_STR_REF(@2718) //  9
+    cd_battlecry4         = RESOLVE_STR_REF(@2719) //  g_ (unofficial)
+    cd_battlecry5         = RESOLVE_STR_REF(@2720) //  h_ (unofficial)
+    cd_bored1             = RESOLVE_STR_REF(@2721) //  d
+    cd_breaking_pt        = RESOLVE_STR_REF(@2723) //  j_ (unofficial)
+    cd_city               = RESOLVE_STR_REF(@2724) //  o
+    cd_common1            = RESOLVE_STR_REF(@2725) //  f
+    cd_common2            = RESOLVE_STR_REF(@2726) //  g
+    cd_common3            = RESOLVE_STR_REF(@2727) //  h
+    cd_common4            = RESOLVE_STR_REF(@2728) //  0
+    cd_common5            = RESOLVE_STR_REF(@2729) //  k_ (unofficial)
+    cd_common6            = RESOLVE_STR_REF(@2730) //  l_ (unofficial, letter)
+    cd_criticalhit        = RESOLVE_STR_REF(@2732) //  z
+    cd_criticalmiss       = RESOLVE_STR_REF(@2733) //  1  (number)
+    cd_damage1            = RESOLVE_STR_REF(@2734) //  l  (letter)
+    cd_day                = RESOLVE_STR_REF(@2737) //  q
+    cd_disrupted          = RESOLVE_STR_REF(@2738) //  6
+    cd_dungeon            = RESOLVE_STR_REF(@2739) //  p
+    cd_dying1             = RESOLVE_STR_REF(@2740) //  m
+    cd_forest             = RESOLVE_STR_REF(@2742) //  n
+    cd_gen_death1         = RESOLVE_STR_REF(@2743) //  w
+    cd_happy              = RESOLVE_STR_REF(@2745) //  r_ (unofficial)
+    cd_hurt1              = RESOLVE_STR_REF(@2746) //  e
+    cd_immune             = RESOLVE_STR_REF(@2748) //  2
+    cd_inventory          = RESOLVE_STR_REF(@2749) //  3
+    cd_leader1            = RESOLVE_STR_REF(@2750) //  b
+    cd_morale_break1      = RESOLVE_STR_REF(@2752) //  u_ (unofficial)
+    cd_night              = RESOLVE_STR_REF(@2754) //  r
+    cd_pickpocket         = RESOLVE_STR_REF(@2755) //  4
+    cd_select_rare1       = RESOLVE_STR_REF(@2756) //  w_ (unofficial)
+    cd_select_rare2       = RESOLVE_STR_REF(@2757) //  x_ (unofficial)
+    cd_select_rare3       = RESOLVE_STR_REF(@2758) //  y_ (unofficial)
+    cd_select_rare4       = RESOLVE_STR_REF(@2759) //  z_ (unofficial)
+    cd_shadows            = RESOLVE_STR_REF(@2764) //  5
+    cd_tired1             = RESOLVE_STR_REF(@2765) //  c
+    cd_trap               = RESOLVE_STR_REF(@2767) //  7
+    cd_unhappy_1          = RESOLVE_STR_REF(@2768) //  5_ (unofficial)
+    cd_unhappy_2          = RESOLVE_STR_REF(@2769) //  6_ (unofficial)
+  STR_VAR cd_name = "ZGBGM7"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2700)
+  STR_VAR zg_filename = "ZGBGM7"
+END
+
+// Male Jovial
+
+LAF cd_add_soundset 
+  INT_VAR 
+    cd_action1            = RESOLVE_STR_REF(@2801) //  i
+    cd_action2            = RESOLVE_STR_REF(@2802) //  j
+    cd_action3            = RESOLVE_STR_REF(@2803) //  k
+    cd_action4            = RESOLVE_STR_REF(@2804) //  s
+    cd_action5            = RESOLVE_STR_REF(@2805) //  t
+    cd_action6            = RESOLVE_STR_REF(@2806) //  u
+    cd_action7            = RESOLVE_STR_REF(@2807) //  v
+    cd_action_rare1       = RESOLVE_STR_REF(@2808) //  x
+    cd_action_rare2       = RESOLVE_STR_REF(@2809) //  y
+    cd_action_rare3       = RESOLVE_STR_REF(@2810) //  a_ (unofficial)
+    cd_action_rare4       = RESOLVE_STR_REF(@2811) //  b_ (unofficial)
+    cd_battlecry1         = RESOLVE_STR_REF(@2816) //  a
+    cd_battlecry2         = RESOLVE_STR_REF(@2817) //  8
+    cd_battlecry3         = RESOLVE_STR_REF(@2818) //  9
+    cd_battlecry4         = RESOLVE_STR_REF(@2819) //  g_ (unofficial)
+    cd_battlecry5         = RESOLVE_STR_REF(@2820) //  h_ (unofficial)
+    cd_bored1             = RESOLVE_STR_REF(@2821) //  d
+    cd_breaking_pt        = RESOLVE_STR_REF(@2823) //  j_ (unofficial)
+    cd_city               = RESOLVE_STR_REF(@2824) //  o
+    cd_common1            = RESOLVE_STR_REF(@2825) //  f
+    cd_common2            = RESOLVE_STR_REF(@2826) //  g
+    cd_common3            = RESOLVE_STR_REF(@2827) //  h
+    cd_common4            = RESOLVE_STR_REF(@2828) //  0
+    cd_common5            = RESOLVE_STR_REF(@2829) //  k_ (unofficial)
+    cd_common6            = RESOLVE_STR_REF(@2830) //  l_ (unofficial, letter)
+    cd_criticalhit        = RESOLVE_STR_REF(@2832) //  z
+    cd_criticalmiss       = RESOLVE_STR_REF(@2833) //  1  (number)
+    cd_damage1            = RESOLVE_STR_REF(@2834) //  l  (letter)
+    cd_day                = RESOLVE_STR_REF(@2837) //  q
+    cd_disrupted          = RESOLVE_STR_REF(@2838) //  6
+    cd_dungeon            = RESOLVE_STR_REF(@2839) //  p
+    cd_dying1             = RESOLVE_STR_REF(@2840) //  m
+    cd_forest             = RESOLVE_STR_REF(@2842) //  n
+    cd_gen_death1         = RESOLVE_STR_REF(@2843) //  w
+    cd_happy              = RESOLVE_STR_REF(@2845) //  r_ (unofficial)
+    cd_hurt1              = RESOLVE_STR_REF(@2846) //  e
+    cd_immune             = RESOLVE_STR_REF(@2848) //  2
+    cd_inventory          = RESOLVE_STR_REF(@2849) //  3
+    cd_leader1            = RESOLVE_STR_REF(@2850) //  b
+    cd_morale_break1      = RESOLVE_STR_REF(@2852) //  u_ (unofficial)
+    cd_night              = RESOLVE_STR_REF(@2854) //  r
+    cd_pickpocket         = RESOLVE_STR_REF(@2855) //  4
+    cd_select_rare1       = RESOLVE_STR_REF(@2856) //  w_ (unofficial)
+    cd_select_rare2       = RESOLVE_STR_REF(@2857) //  x_ (unofficial)
+    cd_select_rare3       = RESOLVE_STR_REF(@2858) //  y_ (unofficial)
+    cd_select_rare4       = RESOLVE_STR_REF(@2859) //  z_ (unofficial)
+    cd_shadows            = RESOLVE_STR_REF(@2864) //  5
+    cd_tired1             = RESOLVE_STR_REF(@2865) //  c
+    cd_trap               = RESOLVE_STR_REF(@2867) //  7
+    cd_unhappy_1          = RESOLVE_STR_REF(@2868) //  5_ (unofficial)
+    cd_unhappy_2          = RESOLVE_STR_REF(@2869) //  6_ (unofficial)
+  STR_VAR cd_name = "ZGBGM8"
+END
+////Graion additions:
+LAF zg_add_name_to_soundset
+  INT_VAR zg_prettyname = RESOLVE_STR_REF(@2800)
+  STR_VAR zg_filename = "ZGBGM8"
+END
