@@ -1,6 +1,6 @@
 BACKUP ~zg_bg_voices/backup~ // location to store files for uninstall purposes
 SUPPORT "https://forums.beamdog.com/discussion/82008"
-VERSION ~1.0.0~
+VERSION ~1.0.3~
 
 
 LANGUAGE ~English~ ~english~ ~%MOD_FOLDER%/english/setup.tra~
