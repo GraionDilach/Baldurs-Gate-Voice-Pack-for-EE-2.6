@@ -11,6 +11,10 @@ Due to inconsistency with other voicesets the Rare Action lines on the Beamdog s
 Initial release.
 Adds the 18 new sets from BG1.
 
+### 1.1.0
+Prevent installing on unmerged SoD.
+Move backup and inlined folder to weidu_external.
+
 ## Acknowledgments
 Thanks for CamDawg for [his documentation on EE 2.6+ voicesets](https://github.com/Gibberlings3/EE_soundset_tool).
 
